@@ -12,5 +12,20 @@ namespace CipherShield_Beta0._2
         {
 
         }
+
+        private static char ReadRequiredSymbol()
+        {
+            char symbol;
+            while (true)
+            {
+                Console.Write("Enter the required symbol: ");
+                if (char.TryParse(Console.ReadLine(), out symbol))
+                {
+                    return symbol;
+                }
+                Console.WriteLine("Invalid input. Please enter a single character.");
+            }
+        }
+
     }
 }
